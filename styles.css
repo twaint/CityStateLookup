@@ -1,0 +1,10 @@
+#bg-cover{
+    height: 1000px;
+    background-size:cover; 
+    background:no-repeat;
+    background-image:url("../images/cityImage.jpeg");
+    background-image: fixed;
+    background-position:center ;
+  }
+
+

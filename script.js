@@ -1,5 +1,5 @@
 "use strict";
-
+//CityState array 
 let cityStates = [{
     state: "California",
     stateAbbr: "CA",
@@ -17,27 +17,23 @@ let cityStates = [{
  },
  {
     state: "Washington",
-    stateAbbr: "",
-    cities: ["Seattle", "Dallas", "Houston", "San Antonio"]
- }
+    stateAbbr: "WA",
+    cities: ["Seattle", "Spokane", "Tacoma", "Vancouver"]
+ },
+ {
+   state: "New York",
+   stateAbbr: "NY",
+   cities: ["Albany", "New York City", "Buffalo", "Balwdin"]
+},
+{
+   state: "Florida",
+   stateAbbr: "FL",
+   cities: ["Tallahassee", "Jacksonville", "Miami", "Tampa"]
+},
 
 ];
 
-
-/*
-The window.onload event handler will need to:
-
-load all of the states in the states dropdown
-programmatically select the first state in the options list
-load all of the cities for that state in the cities dropdown
-You will need to connect an event handler to the states dropdown for the onchange event handler.  In that event handler function, you will need to:
-
-clear the cities dropdown
-figure out which state was the new selected state
-load all of the cities for that state in the cities dropdown
-*/
-
-//onload thingy
+//onload
 window.onload = function(){ //windows is for the browswer, onload is for the function (wheb called on or used)
     loadStatesDropdown()
     let statesList = document.getElementById("statesList")
@@ -62,6 +58,7 @@ function loadStatesDropdown(){
 
     addSelectOptionsToCity()
 
+    //to run through the full array list
     for(let i=0; i < cityStates.length; i++){
        let createOption = document.createElement("option")
        createOption.textContent = cityStates[i].state
@@ -70,7 +67,7 @@ function loadStatesDropdown(){
     }
 
 }
-
+//main function to view
 function citiesAppear(){
    let statesList = document.getElementById("statesList")
    let citiesList = document.getElementById("citiesList")
